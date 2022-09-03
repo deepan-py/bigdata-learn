@@ -1,9 +1,11 @@
 # Data Engineering Spark
+
 This is ITVersity repository to provide appropriate single node hands on lab for students to learn skills such as Python, SQL, Hadoop, Hive, and Spark. This is extensively used as part of our Udemy courses as well as our upcoming guided programs. You can also use our [state-of-the-art](https://labs.itversity.com) multi-node Hadoop and Spark lab.
 
 ## Udemy Courses
 
 This GitHub repository can be leveraged to setup Single Node Hadoop and Spark Cluster along with Jupyterlab and Postgres to learn Python, SQL, Hadoop, Hive, and Spark which are covered as part of the below Udemy courses. They are available at a max of $25 and we provide $10 coupons 3 times every month. Also, these courses are part of Udemy for business.
+
 * [Data Engineering Essentials Hands-on - Python, SQL, and Spark](https://www.udemy.com/course/data-engineering-essentials-sql-python-and-spark/?referralCode=EEF55B4668DA42F6154D)
 * [Spark SQL and Pyspark 2 or Pyspark 3](https://www.udemy.com/course/cca-175-spark-and-hadoop-developer-python-pyspark/?referralCode=86C8942891469FD0AD6D)
 
@@ -12,6 +14,7 @@ This GitHub repository can be leveraged to setup Single Node Hadoop and Spark Cl
 ## Technologies Covered
 
 As part of this custom image built by us, we have included the following.
+
 * Hadoop (HDFS, YARN, and Map Reduce)
 * Hive
 * Spark 2
@@ -26,6 +29,7 @@ For all video lectures, up-to-date material, live support - feel free to sign up
 ### Pre-requisites
 
 Here are the pre-requisites to setup the Python and SQL lab.
+
 * Memory: 8 GB RAM
 * CPU: At least Quadcore
 * If you are using Windows or Mac, make sure to setup Docker Desktop.
@@ -35,6 +39,7 @@ Here are the pre-requisites to setup the Python and SQL lab.
 ### Configure Docker Desktop
 
 If you are using Windows or Mac, you need to change the settings to use as much resources as possible.
+
 * Go to Docker Desktop preferences.
 * Change memory to 4 GB.
 * Change CPUs to the maximum number.
@@ -42,11 +47,13 @@ If you are using Windows or Mac, you need to change the settings to use as much 
 ### Clone Repository
 
 Here are the steps one need to follow to setup the lab.
+
 * Clone the repository by running `git clone https://github.com/itversity/data-engineering-spark`.
 
 ### Start Environment
 
 Here are the steps to start the environment.
+
 * Run `docker-compose up -d --build itvdflab`.
 * It will set up environment with Jupyter Lab and Postgresql. You can validate by running `docker-compose ps`.
 * You can run `docker-compose logs -f` to review the progress.
@@ -55,6 +62,7 @@ Here are the steps to start the environment.
 ### Access the Lab
 
 Here are the steps to access the lab.
+
 * Make sure both Postgres and Jupyter Lab containers are up and running by using `docker-compose ps`
 * Get the token from the Jupyter Lab container using below command.
 
@@ -74,6 +82,7 @@ Once you login, you should be able to go through the first major module under **
 ### Pre-requisites
 
 Here are the pre-requisites to setup the Hadoop and Spark lab.
+
 * Memory: 16 GB RAM
 * CPU: At least Quadcore
 * If you are using Windows or Mac, make sure to setup Docker Desktop.
@@ -84,6 +93,7 @@ Here are the pre-requisites to setup the Hadoop and Spark lab.
 ### Configure Docker Desktop
 
 If you are using Windows or Mac, you need to change the settings to use as much resources as possible.
+
 * Go to Docker Desktop preferences.
 * Change memory to 12 GB.
 * Change CPUs to the maximum number.
@@ -91,11 +101,13 @@ If you are using Windows or Mac, you need to change the settings to use as much 
 ### Setup Environment
 
 Here are the steps one need to follow to setup the lab.
+
 * Clone the repository by running `git clone https://github.com/itversity/data-engineering-spark`.
 
 ### Delete Python and SQL Environment
 
 Hadoop and Spark require more horse power. Also, there is no need to keep containers related to Python and SQL up and running while going through Hadoop and Spark material.
+
 * We can tear down containers related to Python and SQL by running below command.
 
 ```shell
@@ -106,6 +118,7 @@ docker-compose rm -v pg.itversity.com
 ### Pull the Image
 
 Hadoop and Spark image is quite big. It is close to 1.5 GB.
+
 * Make sure to pull it before running `docker-compose` command to setup the lab.
 * You can pull the image using `docker pull itversity/itvdelab`.
 * You can validate if the image is successfully pulled or not by running `docker images` command.
@@ -113,6 +126,7 @@ Hadoop and Spark image is quite big. It is close to 1.5 GB.
 ### Start Environment
 
 Here are the steps to start the environment.
+
 * Run `docker-compose up -d --build itvdelab`.
 * It will set up single node Hadoop, Hive and Spark Environment along with metastore for hive.
 * You can run `docker-compose logs -f itvdelab` to review the progress. It will take some time to complete the setup process.
@@ -121,6 +135,7 @@ Here are the steps to start the environment.
 ### Access the Lab
 
 Here are the steps to access the lab.
+
 * Make sure both Postgres and Jupyter Lab containers are up and running by using `docker-compose ps`
 * Get the token from the Jupyter Lab container using below command.
 
